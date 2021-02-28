@@ -13,7 +13,8 @@ from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QWidget
 from PyQt5.QtGui import QImage
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import QTimer
+from PyQt5.QtCore import QTimer,Qt
+
 
 # import Opencv module
 import cv2
@@ -25,6 +26,7 @@ class MainWindow(QWidget):
     def __init__(self):
         # call QWidget constructor
         super().__init__()
+        self.setWindowFlags(Qt.WindowStaysOnTopHint)
         self.ui = Ui_Form()
         self.ui.setupUi(self)
 
